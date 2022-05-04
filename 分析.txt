@@ -489,7 +489,7 @@ xi(i=1,･･･,n))
 
 
 
-13. 「ネイピア数、tan(45°)、1の対数、円周率、1の階乗」の5つの数からなるデータがある。このデータについて正しいものはどれか。 
+13. 「ネイピア数、tan(45°)、1の対数、円周率、1の階乗」の5つの数からなるデータがある。このデータについて正しいものはどれか。
 Ｘネイピア数は円周率より大きい
 Ｘtan(45°)は中央値より大きい
 〇最頻値は1である
@@ -536,7 +536,7 @@ c2 = c1.reshape((2, 3))
 c2  ==> array([0, 1, 2],[3, 4, 5])
 
 c3=c2.ravel()  1次元配列に戻す 参照を返す★★浅いコピー
-c3  ==> array([0, 1, 2, 3, 4, 5]) 
+c3  ==> array([0, 1, 2, 3, 4, 5])
 
 c4 = c2.flatten() #copy　コピーを返す★★深いコピー
 
@@ -544,21 +544,21 @@ a.dtype 配列要素のデータの型を確認★★データ型を確認
 dtype('int64')
 
 ★浅いコピー
-a= array([ 1, 2, 4]) 
+a= array([ 1, 2, 4])
 a1=a
-a1 => array([ 1, 2, 4]) 
+a1 => array([ 1, 2, 4])
 
 a1[1]=5
-a1 =>  array([ 1, 5, 4]) 
-a  =>  array([ 1, 5, 4]) 
+a1 =>  array([ 1, 5, 4])
+a  =>  array([ 1, 5, 4])
 
 ★深いコピー
 a2 = a.copy()
 a2
-a2 =>  array([ 1, 5, 4]) 
+a2 =>  array([ 1, 5, 4])
 a2[0]=6
-a2 =>  array([ 6, 5, 4]) 
-a =>  array([ 1, 5, 4]) 
+a2 =>  array([ 6, 5, 4])
+a =>  array([ 1, 5, 4])
 
 参照の場合、浅いコピー
 
@@ -566,11 +566,11 @@ a =>  array([ 1, 5, 4])
 pythonリストは深いコピー★★★★★★
 Numpyは浅いコピー（参照）★★★★★★
 
-np.arange(5) => array([ 0, 1, 2, 3, 4]) 
+np.arange(5) => array([ 0, 1, 2, 3, 4])
 
-np.arange(1, 5) => array([ 1, 2, 3, 4]) 
+np.arange(1, 5) => array([ 1, 2, 3, 4])
 
-np.arange(1, 5, 2) => array([  1,  3]) 
+np.arange(1, 5, 2) => array([  1,  3])
 
 np.random.seed(123)
 np.random.random((3, 2)) *0-1の間のランダムな要素3行2列で表示 引数タプル★★★★
@@ -605,7 +605,7 @@ array([[1., 0., 0.],
 np.full(3, 3.14) => 指定値　array([3.14, 3.14, 3.14])★★
 np.full((2, 4), np.pi)
 
-np.nan => nan 
+np.nan => nan
 not a number 数値でない
 
 np.linspace(0, 1, 5) 0から1までを等間隔に区切った5つの要素★★★★
@@ -630,7 +630,7 @@ array([[1, 2, 8],
        [30, 60, 45]])
 1つ目の配列に2列、残り1列が2つ目
 first, second = np.hsplit(b3, [2])★★★★★★
-first 
+first
 array([1, 2],[4, 5], [60, 60])
 second
 array([8],[8], [45])
@@ -665,7 +665,7 @@ n=np.arange(4, 7)
 array([4, 5, 6])
 
 xx, yy = np.meshgrid(m, n)★★★★★★
-xx  
+xx
 array([[0, 1, 2, 3],
        [0, 1, 2, 3],
        [0, 1, 2, 3]])
@@ -685,7 +685,7 @@ np.exp(a)
 ブロードキャスト
 　NumPyでは直接演算ができる、加算、減算、積
 　c - np.mean(c)
- 
+
 ドット積★★★★★★★★
 　ベクトルどおしの掛け算　ｘ・ｙ
 　計算結果はスカラーになる
@@ -806,12 +806,12 @@ df.loc[:, ["A","B"]] = df.loc[["A","B"]]★★★★locはインデックス名�
 
 インデックス方向の抽出
 
-df.loc["1行目", : ] 
+df.loc["1行目", : ]
 A 20
 B 1
 C 5
 
-df.loc[["1行目","3行目"], : ] 
+df.loc[["1行目","3行目"], : ]
 　　　A　　B     C
 1行目 20　　1    2
 3行目 40　　7    8
@@ -821,7 +821,7 @@ df.loc[["1行目"], ["A","B"]]
 iloc[インデックス番号, カラム番号]★★ilocはインデックス番号, カラム番号
 df.iloc[1, 1] =>　5
 
-df.iloc[1:, 1] 
+df.iloc[1:, 1]
 2行目 30　　4
 3行目 40　　7
 4行目 30　　4
@@ -938,7 +938,7 @@ np.random.randint(1, 31, 365) 生成する整数の範囲の最小値は1、最�
 
 df[“利用回数”].value_counts().to_frame()
 値ごとの出現回数を数えるvalue_counts関数
-Series.to_frame() メソッドで Series をデータフレームに変換する 
+Series.to_frame() メソッドで Series をデータフレームに変換する
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 4 		ライブラリによる分析実践 	3 	Matplotlib 	6 	15.00%
@@ -989,7 +989,7 @@ ax.legend(loc='lower right')  右下に表示
 
 ★ファイル出力
 fig,saving('xx.png')
-fig,saving('xx.svg')  
+fig,saving('xx.svg')
 
 ★折れ線グラフ
 plt.plot(x, y) #折れ線グラフ
@@ -1192,7 +1192,7 @@ savefigメソッドで任意のファイル名を指定して保存
 x = np.arange(0.0, 15.0, 0.1)　0から0.1ごとに15の1つ手前まで、つまり14.9までの配列を生成
 
 zip関数　 複数のリストの要素をまとめて取得
-　　y_total = [num1 + num2 for num1, num2 in zip(y1, y2)] 
+　　y_total = [num1 + num2 for num1, num2 in zip(y1, y2)]
 
 numpyのrandom.normal関数で正規分布に従う乱数を生成
 np.random.normal(mu,sigma,1000)
@@ -1203,7 +1203,7 @@ sigma 標準偏差
 ax.pie(x, labels=labels, startangle=90, counterclock=False, shadow=True, autopct=’%1.2f%%’)
  startangle引数に、（デフォルトとは異なる）90°を設定して、円グラフの12時の位置を、開始位置に指定します。
  counterclock引数を確認します。これにはFalse（時計回り）の指定
- autpct引数に、値をパーセント表示させるための指定がされています。 
+ autpct引数に、値をパーセント表示させるための指定がされています。
  具体的には右のように、まず書式化演算子%で、最低限表示させたい桁数（ここでは1桁）が指定されています。
  ドットの後に、数字とfの組み合わせで精度（つまり小数点以下は今回2桁まで）が指定されています。
  そして最後に％演算子ともう一つの%を指定し一個の%を表示させています。
@@ -1271,20 +1271,7 @@ le.classes_★★★★
 array(['a','b','c','a','a','c'], dtype=object)
 
 ■One-hotエンコーディング★★
-〇One-hotエンコーディングでは、たとえば、テーブル形式のデータのカテゴリ変数の列について、取り得る値の分だけ列を増やして、
-　各行の該当する値の列のみに1を、それ以外の列には0を入力するように変換する処理をいう。
 
-from sklearn.preprocessing import LabelEncoder, OneHotEncoder
-# DataFrameをコピー
-df_ohe = df.copy()
-# ラベルエンコーダのインスタンス化
-le = LabelEncoder()
-# 英語のa、b、cを1、2、3に変換
-df_ohe['B'] = le.fit_transform(df_ohe['B'])
-# One-hotエンコーダのインスタンス化　
-ohe = OneHotEncoder(categorical_features=[1])##変換する列名を指定 categorical_features=[1]
-# One-hotエンコーディング
-ohe.fit_transform(df_ohe).toarray()
 
 ■特徴量の正規化
 特徴量の大きさをそろえる処理
@@ -1411,7 +1398,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 Ｘscikit-learnのインターフェースでは、学習はfitメソッド、予測はestimateメソッドを用いて実行できる。
 
 
-X, y = boston.data, boston.target 
+X, y = boston.data, boston.target
 〇boston.dataには説明変数、boston.targetには目的変数が格納されている。
 
 ポアソン分布　交通事故の発生回数の予測、機械部品の故障予測など、稀に生じる事象についてモデル化したい場合に用いられる、離散型の確率分布である。
@@ -1419,7 +1406,7 @@ X, y = boston.data, boston.target
 5		スクレイピング 	0 	0.00%
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-s = ‘　DIVE INTO CODE　’ 
+s = ‘　DIVE INTO CODE　’
 s.strip() 両端空白、\t削除
 'DIVE INTO CODE”
 
