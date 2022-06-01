@@ -221,7 +221,7 @@ Deep Q Network(DQN)
 	・ｋ-分割交差検証
 	・１つ抜き（Leave　One　Out）法
 
-データリーケージ
+データリーケージ 未知のデータが入ってしまうこと
 
 ★20.分類モデルの評価
 
@@ -305,7 +305,7 @@ AUC
 
 GPGPU
 
-TPU（Tensor　Processing　Unit）
+TPU（Tensor　Processing　Unit）Googleが開発
 
 ディープラーニングのデータ量 パラメータ数の10倍は必要
 
@@ -320,6 +320,13 @@ ReLU関数は出力を確率として表現できない、分類問題の出力�
 Tanh関数
 
 	Leaky ReLU関数★
+
+★27. 学習の最適化（勾配降下法）
+
+勾配降下法
+
+大域最適解、局所最適解、停留点
+
 
 
 
